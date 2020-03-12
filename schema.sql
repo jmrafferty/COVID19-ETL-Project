@@ -1,5 +1,7 @@
 
 /*
+
+
 DROP TABLE "geodata" CASCADE;
 DROP TABLE "confirmed";
 DROP TABLE "deaths";
@@ -7,30 +9,30 @@ DROP TABLE "recovered";
 
 
 CREATE TABLE "confirmed" (
-    "longitude" float   NOT NULL,
-    "latitude" float   NOT NULL,
-    "date" date   NOT NULL,
-    "cases" bigint   NOT NULL
+    "Lat" float   ,
+    "Long" float   ,
+    "Date" date   ,
+    "Cases" bigint   
 );
 CREATE TABLE "deaths" (
-    "longitude" float   NOT NULL,
-    "latitude" float   NOT NULL,
-    "date" date   NOT NULL,
-    "cases" bigint   NOT NULL
+    "Lat" float   ,
+    "Long" float   ,
+    "Date" date   ,
+    "Cases" bigint   
 );
 CREATE TABLE "recovered" (
-    "longitude" float   NOT NULL,
-    "latitude" float   NOT NULL,
-    "date" date   NOT NULL,
-    "cases" bigint   NOT NULL
+    "Lat" float   ,
+    "Long" float   ,
+    "Date" date   ,
+    "Cases" bigint   
 );
 CREATE TABLE "geodata" (
-    "longitude" float   ,
-    "latitude" float   ,
-    "province_state" varchar   ,
-    "region_country" varchar   ,
+    "Long" float   ,
+    "Lat" float   ,
+    "Province/State" varchar  ,
+    "Country/Region" varchar  ,
     CONSTRAINT "pk_geodata" PRIMARY KEY (
-        "longitude","latitude"
+        "Long","Lat"
      )
 );
 
